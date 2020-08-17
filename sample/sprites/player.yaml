@@ -1,0 +1,60 @@
+name: PlayerModel1
+width:    33
+height:   1
+originx:  16
+originy:  1
+layer:    2
+type: ASCII
+glyphs:
+    "L":
+        background:    color1
+        foreground:    color2
+        display:       "L"
+
+    "V":
+        background:    color1
+        foreground:    color2
+        display:       "V"
+
+    "E":
+        background:    color1
+        foreground:    color2
+        display:       "E"
+
+    "C":
+        background:    color1
+        foreground:    color2
+        display:       "C"
+
+    "O":
+        background:    color1
+        foreground:    color2
+        display:       "O"
+
+    "P":
+        background:    color1
+        foreground:    color2
+        display:       "P"
+
+    "M":
+        background:    color1
+        foreground:    color2
+        display:       "M"
+
+    "T":
+        background:    color1
+        foreground:    color2
+        display:       "T"
+
+    "_":
+        background:    color1
+        foreground:    color2
+        display:       " "
+
+palette:
+    color1:  green
+    color2:  white
+
+frames:
+    - names:    [ F0 ]
+      data:     [ "___L_E_V_E_L___C_O_M_P_L_E_T_E___" ]

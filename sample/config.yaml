@@ -1,0 +1,11 @@
+sprites:
+  path: ./sprites
+  out: ./bin/data/sprites.bin
+
+levels:
+  path: ./levels
+  out: ./bin/data/levels.bin
+
+sounds:
+    path: ./sounds
+    out: ./bin/media/sounds

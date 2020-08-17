@@ -1,14 +1,17 @@
-- [ ] render
 - [ ] sprite
+- [ ] render
+- [ ] ui
 - [ ] Entity engine
 - [ ] level
 - [ ] animations
 - [ ] keyboard
 - [ ] gamepad
-- [ ] ui
 - [ ] collider
 - [ ] trigger
 - [ ] assets compiler
+    - [x] sprite
+    - [ ] level
+    - [ ] sound
 - [ ] scripting
 - [ ] addons
 - [ ] 3D?

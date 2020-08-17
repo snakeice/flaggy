@@ -1,0 +1,24 @@
+name: PlayerModel2
+width:    33
+height:   1
+originx:  16
+originy:  1
+layer:    2
+type: Text
+glyphs:
+    "_":
+        background:    color1
+        foreground:    color2
+        display:       " "
+    
+    default:
+        background:    color1
+        foreground:    color2
+        
+palette:
+    color1:  green
+    color2:  white
+
+frames:
+    - names:    [ F0 ]
+      data:     [ "___L_E_V_E_L___C_O_M_P_L_E_T_E___" ]
