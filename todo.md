@@ -1,4 +1,9 @@
-- [ ] sprite
+
+- [-] assets compiler
+    - [x] sprite
+    - [x] level
+    - [ ] sound (need? 8-bits)
+- [-] sprite
 - [ ] render
 - [ ] ui
 - [ ] Entity engine
@@ -8,10 +13,6 @@
 - [ ] gamepad
 - [ ] collider
 - [ ] trigger
-- [ ] assets compiler
-    - [x] sprite
-    - [ ] level
-    - [ ] sound
 - [ ] scripting
 - [ ] addons
 - [ ] 3D?

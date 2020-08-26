@@ -35,11 +35,18 @@ func writeGob(data interface{}, outPath string) error {
 	}
 
 	err = ensureNewFile(outPath)
-	utils.ErrCheck(err)
+	if err != nil {
+		return err
+	}
 
 	file, err := os.OpenFile(outPath, os.O_RDWR, 0644)
-	utils.ErrCheck(err)
-	gz := gzip.NewWriter(file)
+	if err != nil {
+		return err
+	}
+	gz, err := gzip.NewWriterLevel(file, gzip.BestCompression)
+	if err != nil {
+		return err
+	}
 	defer gz.Close()
 
 	enc := gob.NewEncoder(gz)

@@ -3,6 +3,7 @@ package compiler
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 	"path"
 	"path/filepath"
 
@@ -22,6 +23,12 @@ func CompileSprites(basePath string, config models.SptiresSource) {
 	for _, spritePath := range spritePaths {
 		fmt.Printf("Parsing %s\n", spritePath)
 		data := loadSprite(spritePath)
+
+		if _, contains := sprites[data.Name]; contains {
+			fmt.Printf("Sprite name '%s' is duplicated!\n", data.Name)
+			os.Exit(1)
+		}
+
 		sprites[data.Name] = data
 	}
 

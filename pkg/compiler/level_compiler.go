@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"os"
 	"path"
 	"path/filepath"
 
@@ -23,6 +24,11 @@ func CompileLevel(basePath string, config models.LevelsSource) {
 	for _, levelPath := range levelPaths {
 		fmt.Printf("Parsing %s\n", levelPath)
 		data := loadLevel(levelPath)
+		if _, contains := levels[data.Name]; contains {
+			fmt.Printf("Level name '%s' is duplicated!\n", data.Name)
+			os.Exit(1)
+		}
+
 		levels[data.Name] = data
 	}
 
