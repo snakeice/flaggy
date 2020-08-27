@@ -14,7 +14,7 @@ import (
 	yaml "gopkg.in/yaml.v2"
 )
 
-func CompileSprites(basePath string, config models.SptiresSource) {
+func CompileSprites(basePath string, config models.SptiresSource) string {
 	fmt.Println("Compiling sprites...")
 	spritePaths := getAllFiles(path.Join(basePath, config.Path))
 
@@ -45,6 +45,11 @@ func CompileSprites(basePath string, config models.SptiresSource) {
 
 	}
 	fmt.Printf("Out file %s\nSprite done!\n", fullOutFile)
+	basePath, _ = filepath.Abs(basePath)
+	path, err := filepath.Rel(basePath, fullOutFile)
+	utils.ErrCheck(err)
+
+	return path
 }
 
 func loadSprite(spritePath string) *sprite.SpriteData {

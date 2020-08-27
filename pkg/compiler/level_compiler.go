@@ -15,7 +15,7 @@ import (
 	yaml "gopkg.in/yaml.v2"
 )
 
-func CompileLevel(basePath string, config models.LevelsSource) {
+func CompileLevel(basePath string, config models.LevelsSource) string {
 	fmt.Println("Compiling levels...")
 	levelPaths := getAllFiles(path.Join(basePath, config.Path))
 
@@ -45,6 +45,11 @@ func CompileLevel(basePath string, config models.LevelsSource) {
 
 	}
 	fmt.Printf("Out file %s\nLevel done!\n", fullOutFile)
+	basePath, _ = filepath.Abs(basePath)
+	path, err := filepath.Rel(basePath, fullOutFile)
+	utils.ErrCheck(err)
+
+	return path
 }
 
 func loadLevel(levelPath string) *level.LevelData {

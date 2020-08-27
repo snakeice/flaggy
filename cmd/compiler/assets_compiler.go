@@ -47,8 +47,10 @@ func main() {
 
 	srcConfig := loadConfig(configPath)
 
-	compiler.CompileSprites(configPath, srcConfig.Sprites)
-	println("")
-	compiler.CompileLevel(configPath, srcConfig.Levels)
+	dataConfig := models.DataFiles{}
+
+	dataConfig.Sprites = compiler.CompileSprites(configPath, srcConfig.Sprites)
+	dataConfig.Levels = compiler.CompileLevel(configPath, srcConfig.Levels)
+	fmt.Printf("\n\n%v\n\n", dataConfig)
 
 }

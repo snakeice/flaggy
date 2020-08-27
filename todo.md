@@ -1,5 +1,6 @@
 
 - [-] assets compiler
+    - [x] config file
     - [x] sprite
     - [x] level
     - [ ] sound (need? 8-bits)
